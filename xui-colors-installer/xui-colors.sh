@@ -190,8 +190,8 @@ else:
     s = re.sub(r'\\s*<a-form-item label="Advanced CSS \\(optional\\)">[\\s\\S]*?</a-form-item>\\s*', "\\n", s, count=1)
 
 # IMPORTANT: keep this marker identical to upstream template text.
-# Using Python-style escapes (\\") here has caused SyntaxError on some systems.
-marker = "{{define \"component/aThemeSwitch\"}}\n<script>\n"
+# Use single-quoted Python literal to avoid any shell/sed/perl quoting issues.
+marker = '{{define "component/aThemeSwitch"}}\n<script>\n'
 if marker not in s:
     print("aThemeSwitch: script marker not found", file=sys.stderr)
     sys.exit(3)
