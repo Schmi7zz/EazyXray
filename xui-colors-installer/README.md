@@ -27,7 +27,7 @@ Telegram channel: **@Schmitzws**
 After you host this repo on GitHub, users can run:
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/<YOU>/<REPO>/main/xui-colors.sh" | sudo bash -s -- install --yes
+curl -fsSL "https://raw.githubusercontent.com/Schmi7zz/EazyXray/main/xui-colors.sh" | sudo bash -s -- install --yes
 ```
 
 ## What to click in the panel
@@ -41,7 +41,7 @@ curl -fsSL "https://raw.githubusercontent.com/<YOU>/<REPO>/main/xui-colors.sh" |
 This repo provides an automated uninstall (rollback to the exact backup created during install):
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/<YOU>/<REPO>/main/xui-colors.sh" | sudo bash -s -- uninstall --yes
+curl -fsSL "https://raw.githubusercontent.com/Schmi7zz/EazyXray/main/xui-colors.sh" | sudo bash -s -- uninstall --yes
 ```
 
 Manual rollback (if needed):
