@@ -27,7 +27,7 @@ Telegram channel: **@Schmitzws**
 After you host this repo on GitHub, users can run:
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/<YOU>/<REPO>/main/xui-colors.sh" | sudo bash
+curl -fsSL "https://raw.githubusercontent.com/Schmi7zz/EazyXray/main/xui-colors.sh" | sudo bash
 ```
 
 ## What to click in the panel
