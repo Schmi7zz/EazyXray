@@ -189,12 +189,14 @@ if '{{define "component/themeCustomizerTemplate"}}' not in s:
 else:
     s = re.sub(r'\\s*<a-form-item label="Advanced CSS \\(optional\\)">[\\s\\S]*?</a-form-item>\\s*', "\\n", s, count=1)
 
-marker = "{{define \\"component/aThemeSwitch\\"}}\\n<script>\\n"
+# IMPORTANT: keep this marker identical to upstream template text.
+# Using Python-style escapes (\\") here has caused SyntaxError on some systems.
+marker = "{{define \"component/aThemeSwitch\"}}\n<script>\n"
 if marker not in s:
     print("aThemeSwitch: script marker not found", file=sys.stderr)
     sys.exit(3)
 
-def_block = r"function createThemeCustomizer\\(\\)\\s*\\{[\\s\\S]*?\\n\\s*\\}\\n"
+def_block = r"function createThemeCustomizer\(\)\s*\{[\s\S]*?\n\s*\}\n"
 if re.search(def_block, s):
     s = re.sub(def_block, "", s, count=1)
 
