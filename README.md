@@ -27,7 +27,7 @@ Telegram channel: **@Schmitzws**
 After you host this repo on GitHub, users can run:
 
 ```bash
-curl -fsSL "https://raw.githubusercontent.com/Schmi7zz/EazyXray/main/xui-colors.sh" | sudo bash
+curl -fsSL "https://raw.githubusercontent.com/Schmi7zz/EazyXray/main/xui-colors.sh" | sudo bash -s -- install --yes
 ```
 
 ## What to click in the panel
@@ -55,7 +55,11 @@ sudo cp -a /usr/local/x-ui/x-ui.bak.YYYYMMDD-HHMMSS /usr/local/x-ui/x-ui
 sudo chmod 755 /usr/local/x-ui/x-ui
 sudo systemctl start x-ui
 ```
+3) Uninstall : 
 
+```bash
+curl -fsSL "https://raw.githubusercontent.com/Schmi7zz/EazyXray/main/xui-colors.sh" | sudo bash -s -- uninstall --yes
+```
 ## Credits
 
 - 3x-ui upstream: `https://github.com/MHSanaei/3x-ui`
