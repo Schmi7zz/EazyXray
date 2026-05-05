@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Thin wrapper so GitHub raw URL can be:
-#   https://raw.githubusercontent.com/<YOU>/<REPO>/main/xui-colors.sh
+# ============================================================
+#  x-ui Custom Colors Installer (stdin-safe)
+#  Author: Schmi7zz | Telegram: @Schmi7zz | Channel: @Schmitzws
+# ============================================================
+#
+# NOTE:
+# This script is designed to be run via:
+#   curl -fsSL "https://raw.githubusercontent.com/Schmi7zz/EazyXray/main/xui-colors.sh" | sudo bash -s -- install --yes
+#
+# It does NOT rely on BASH_SOURCE or local files.
 
-SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-bash "${SCRIPT_DIR}/xui-colors-installer/xui-colors.sh" "$@"
+URL_INSTALLER="https://raw.githubusercontent.com/Schmi7zz/EazyXray/main/xui-colors-installer/xui-colors.sh"
+
+curl -fsSL "${URL_INSTALLER}" | bash -s -- "$@"
 
